@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lord of the Rings Homepage</title>
+    <link rel="icon" href="{{ url_for('static', filename='ring.jpg') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      {% if 'username' in session %}
+        <p>Welcome, {{ session['username'] }}! <a href="{{ url_for('logout') }}">Logout</a></p>
+      {% endif %}
+      <h1>This is Lord of the Rings</h1>
+      <p>{{ current_datetime }}</p>
+      <img src="../static/trilogyposter.jpeg" alt="LOTR Trilogy Fan Art Poster">
+      <h2>Fun Facts</h2>
+      <ul>
+        <li>Lord of the Rings: Return of the King, the third movie in the trilogy won big time at the Academy Awards! To this day, it holds the record for largest sweep, winning all 11 Academy Awards it was nominated for in 2003. That is legendary!</li>
+        <li>There is an extended version for each film.</li>
+        <li>The trilogy grossed over $2.9 billion around the world, one of the highest-grossing film franchises in history.</li>
+        <li>The visual and special effects of the film were revolutionary despite being lower budget compared to other Hollywood films of its time.</li>
+        <li>The movies were filmed in stunning locations in New Zealand.</li>
+        <li>The cast gained much renown for their roles in these films</li>
+        <li>The franchise left a lasting impact on pop culture and fantasy as a genre.</li>
+        <li>The diversity of races, languages, and lands made the world much more rich and immersive for fans and critics alike.</li>
+        <li>The music, composed by Howard Shore, is critically acclaimed and iconic</li>
+      </ul>
+      <h2>Wanna See More Of This Website?</h2>
+      <p>Join the Fellowship today and <a href="{{ url_for('register') }}">Register for an Account Here</a></p>
+      <p>Or resume your journey through Middle Earth. <a href="{{ url_for('login') }}">Log In Here</a></p>
+      <h2>The Movies</h2>
+      <p>Let's dive into one of the best cinematic trilogies of all time!</p>
+      <a href="{{ url_for('fotr') }}">The Fellowship of the Ring</a>
+      <a href="{{ url_for('ttt') }}">The Two Towers</a>
+      <a href="{{ url_for('rotk') }}">The Return of the King</a>
+      <h2>Resources</h2>
+      <p>A. Gray. "How The Lord of the Rings Trilogy Changed Movies Forever". Nov 22, 2012. IGN.com. <a href="https://www.ign.com/articles/2012/11/22/how-the-lord-of-the-rings-trilogy-changed-movies-forever">https://www.ign.com/articles/2012/11/22/how-the-lord-of-the-rings-trilogy-changed-movies-forever</a></p>
+      <p>R. Motamayor. "5 Ways The Lord of the Rings Changed Blockbusters Forever". Dec 18, 2021. Rotten Tomatoes. <a href="https://www.ign.com/articles/2012/11/22/how-the-lord-of-the-rings-trilogy-changed-movies-forever">https://www.ign.com/articles/2012/11/22/how-the-lord-of-the-rings-trilogy-changed-movies-forever</a></p>
+    </div>
+  </body>
+</html>

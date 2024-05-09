@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LOTR User Registration</title>
+    <link rel="icon" href="{{ url_for('static', filename='ring.jpg') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Register Account</h1>
+        <p>To access the rest of this website, you must register, then log in</p>
+        {% if message %}
+            <p class="error">{{ message }}</p>
+        {% endif %}
+        <form method="POST">
+            <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            </div>
+            <div>
+            <input type="submit" class="submit" value="Create Account">
+            </div>
+        </form>
+        <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a>.</p>
+        <!--For any reason, the user could also return to the home page-->
+        <a href="{{ url_for('home') }}">Home</a>
+    </div>
+</body>
+</html>
