@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Return of the King</title>
+    <link rel="icon" href="{{ url_for('static', filename='ring.jpg') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>The Return of the King</h1>
+      <p>{{ current_datetime }}</p>
+      <p>
+        This is the third and last movie in the Lord of the Rings trilogy. It
+        was released in 2003.
+      </p>
+      <!--ROTK CONTENT HERE-->
+      <h2>Synopsis</h2>
+      <p>The conclusion of the series. Frodo and Sam are in the depths of Mordor and reach Mount Doom to destroy the ring. They face many dangerous obstacles the closer they get to Mount Doom. Meanwhile, to save the race of Men from their downfall, Aragorn finally accepts his claim to the throne of Gondor to lead a final battle to save Middle Earth. All the Free Peoples left in Middle Earth join forces to bring an end to the era of Sauron's evil reign.</p>
+      <h3>Key Events (Spoiler Alert)</h3>
+      <ul>
+        <li>
+          Frodo and Sam are reaching the depths of Mordor while Sauron's forces
+          prepare to march a siege on Minas Tirith, the capital of Gondor
+        </li>
+        <li>
+          Pippin and Gandalf light the beacons to call for the aid of Rohan
+          against the siege.
+        </li>
+        <li>
+          Aragorn accepts his lineage and his role as the heir to the throne of
+          Gondor, earning the allegiance of the Dead Men of Dunharrow, an army
+          of the dead.
+        </li>
+        <li>
+          King Theodin leads the Riders of Rohan to Minas Tirith to counter
+          Sauron's forces. Aragorn brings his allied army of the dead to their
+          aid, ending the battle.
+        </li>
+        <li>
+          Frodo and sam reach Mount Doom after facing many obstacles including
+          Gollum and the giant spider, Shelob.
+        </li>
+        <li>
+          Aragorn leads the race of men and his other companions to one final
+          epic battle at the Black Gate of Mordor.
+        </li>
+        <li>
+          Frodo almost succumbs to the Ring and Gollum ambushes him. Gollum is
+          tossed into the lava, taking the Ring with him.
+        </li>
+        <li>
+          With the Ring destroyed, Sauron and his armies are vanquished. Aragorn
+          soon is coronated into the throne of Gondor.
+        </li>
+      </ul>
+
+      <h2>Want to Watch?</h2>
+      <p>You buy/rent the movie on:</p>
+      <ul>
+        <li>
+          <a
+            href="https://www.amazon.com/Lord-Rings-Return-King/dp/B0091XIBOE/ref=sr_1_1?crid=1KOB2LAF9ADQ9&dib=eyJ2IjoiMSJ9.nng_dN5rwdgxGdtjmSBXAMdKxVK88_09drPr2HqgKw2uQAstUXtUxk04pFycXPusGlOdtfM49_5mqlPiWLOUEQDDwDmNo7TfVWXqlQ1xbG1_0dZn3hocbYUrR19M2BfsHO1hGfUWbuMxQyC4NT567-IEFjzyAQbhBI2HUibBUkMXrRg2AssNu7IMzC3tuwfuaQhUuGfLcCN99-PQcTLo9nN_N30hW9hrKGTwqNXvK78.o7HBn2FXCeC6PMmJUvlThz-lip2W7Ir2ia0Y9JAOfkc&dib_tag=se&keywords=lord+of+the+rings+return+of+the+King&qid=1708356813&s=instant-video&sprefix=lord+of+the+rings+return+of+the+king%2Cinstant-video%2C247&sr=1-1"
+            >Amazon Prime Video</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.vudu.com/content/browse/details/The-Lord-of-the-Rings-The-Return-of-the-King/40326"
+            >VUDU</a
+          >
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=JunaHeMCYno"
+            >YouTube</a
+          >
+        </li>
+      </ul>
+      <a href="{{ url_for('fotr') }}">The Fellowship of the Ring</a>
+      <a href="{{ url_for('ttt') }}">The Two Towers</a>
+      <a href="{{ url_for('home') }}">Home</a>
+    </div>
+  </body>
+</html>

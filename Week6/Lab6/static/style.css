@@ -1,0 +1,44 @@
+@font-face {
+    /* Add a font family for a custom font that was downloaded */
+    font-family: 'RingBearerFont';
+    src: url('RINGM___.TTF') format('truetype');
+}
+
+body {
+    /* Establish the look of the body of the webpage with a background image */
+    font-family: 'Times New Roman', Times, serif;
+    margin: 15px;
+    background-image: url('map-of-middle-earth.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.container {
+    /* Creates a container around the page so that the background image does not make it difficult 
+    to read the words on the page */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);  /* Adjust the last value for opacity (0 is transparent, 1 is opaque) */
+}
+
+h1 {
+    /* Create a style for Heading 1 */
+    font-family: 'RingBearerFont', Arial, sans-serif;
+    color: black;
+}
+
+a {
+    /* style for hyperlinks */
+    color: #009900;
+    text-decoration: none;
+}
+
+a:hover {
+    /* make a hyperlink behave a certain way when hovering over it with the mouse cursor */
+    text-decoration: underline;
+}

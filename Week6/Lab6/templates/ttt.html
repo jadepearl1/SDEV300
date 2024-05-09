@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Two Towers</title>
+    <link rel="icon" href="{{ url_for('static', filename='ring.jpg') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>The Two Towers</h1>
+      <p>{{ current_datetime }}</p>
+      <p>
+        This is the second movie in the Lord of the Rings trilogy. It was
+        released in 2002.
+      </p>
+      <!--TTT CONTENT HERE-->
+      <h2>Synopsis</h2>
+      <p>
+        The Fellowship of the Ring is scattered. Frodo and Sam meet an unwelcome
+        creature; Aragorn, Legolas, and Gimli join forces with the horse lords
+        of Rohan to defend Middle Earth against the growing army of Saruman.
+        Merry and Pippin, previously captured by Uruk-hai, encounter the Ents,
+        ancient tree shepherds of Fangorn Forest.
+      </p>
+      <h3>Key Events (Spoiler Alert)</h3>
+      <ul>
+        <li>
+          Aragorn, Legolas, and Gimli continue pursuing the rescue of Merry and
+          Pippin and encounter exiled riders of Rohan who had killed the Orcs
+          that had captured Merry and Pippin
+        </li>
+        <li>
+          Frodo and Sam are ambushed in their sleep by Gollum but were able to
+          capture him. He agrees to lead them to Mordor
+        </li>
+        <li>
+          Aragorn, Legolas, and Gimli follow the trail of the other two hobbits
+          into Fangorn forest where they encounter a resurrected Gandalf who is
+          now Gandalf the White
+        </li>
+        <li>
+          The four go to Rohan to help King Theodin who was possessed by
+          Saruman. Merry and Pippin meet Treebeard, an Ent (tree shepherd) who
+          is a friend of Gandalf.
+        </li>
+        <li>
+          To avoid Saruman's army, Aragorn and the others take shelter in Helm's
+          Deep. They aid the people of Rohan and elves of Lothlorien in fending
+          off a massive seige on Helm's Deep
+        </li>
+        <li>
+          Frodo and Sam are captured by Faramir, Boromir's younger brother who
+          is tempted by the One Ring.
+        </li>
+        <li>
+          Faramir, who is tempted to take the ring to please his father, decides
+          to let Frodo and Sam free. Meanwhile, the Ents march a siege on
+          Isengard against Saruman for his destruction of the forest of Fangorn
+        </li>
+      </ul>
+      <h2>Want to Watch?</h2>
+      <p>You can buy/rent the movie on:</p>
+      <ul>
+        <li>
+          <a
+            href="https://www.amazon.com/Lord-Rings-Towers-Elijah-Wood/dp/B003FM1MNO"
+            >Amazon Prime Video</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.vudu.com/content/browse/details/The-Lord-of-the-Rings-The-Two-Towers/33664"
+            >VUDU</a
+          >
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=2e61KP1yPdw&feature=youtu.be"
+            >YouTube</a
+          >
+        </li>
+      </ul>
+      <a href="{{ url_for('fotr') }}">The Fellowship of the Ring</a>
+      <a href="{{ url_for('rotk') }}">The Return of the King</a>
+      <a href="{{ url_for('home') }}">Home</a>
+    </div>
+  </body>
+</html>
