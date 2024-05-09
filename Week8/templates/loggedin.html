@@ -1,0 +1,18 @@
+<!--This page is meant to show the user that they successfully logged into the website and they can navigate back home or log out-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Successful</title>
+    <link rel="icon" href="{{ url_for('static', filename='ring.jpg') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{ username }}!</h1>
+        <p>You are now logged in.</p>
+        <a href="{{ url_for('update_pass') }}">Update Password</a>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</body>
+</html>

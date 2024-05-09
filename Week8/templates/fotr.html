@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fellowship of the Ring</title>
+    <link rel="icon" href="{{ url_for('static', filename='ring.jpg') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      {% if 'username' in session %}
+        <p>Welcome, {{ session['username'] }}! <a href="{{ url_for('logout') }}">Logout</a></p>
+      {% endif %}
+      <h1>The Fellowship of the Ring</h1>
+      <p>{{ current_datetime }}</p>
+      <p>This is the first movie in the Lord of the Rings Trilogy. It was released in 2001.</p>
+      <!-- FOTR CONTENT -->
+      <img src="../static/fellowship.jpg" alt="Fellowship of the Ring movie poster">
+      <h2>Synopsis</h2>
+      <p>
+        In the peaceful hills of the Shire, a young hobbit, Frodo Baggins
+        fatefully comes across a magical ring of power in the aftermath of his
+        uncle Bilbo Baggins's Birthday. Frodo discovers that Bilbo's ring is the
+        One Ring forged by the Dark Lord Sauron. If returned to its master, the
+        world of Middle Earth would crumble into ruin. He takes the role as the
+        ringbearer to travel to Mount Doom, accompanied by his Fellowship, to
+        destroy the ring once and for all.
+      </p>
+      <h3>The Fellowship of the Ring</h3>
+      <ol>
+        <li>Frodo Baggins - Hobbit</li>
+        <li>Samwise Gamgee - Hobbit</li>
+        <li>Meriadoc "Merry" Brandybuck - Hobbit</li>
+        <li>Peregrin "Pippin" Took - Hobbit</li>
+        <li>Aragorn (aka. Strider) - Man/Ranger</li>
+        <li>Legolas - Elf</li>
+        <li>Gimli, Son of Gloin - Dwarf</li>
+        <li>Gandalf the Grey - Wizard</li>
+        <li>Boromir - Man</li>
+      </ol>
+      <h3>Key Events (Spoiler Alert)</h3>
+      <ul>
+        <li>Frodo inherits the ring from his uncle Bilbo after Bilbo's 111th birthday party. Gandalf the Grey tells Frodo the ring's evil backstory</li>
+        <li>Frodo is accompanied by Sam, Merry, and Pippin to meet with Gandalf in the villiage of Bree. They meet Aragorn but are chased by Nazgul (ring wraiths in the process)</li>
+        <li>Frodo is mortally wounded and taken to Rivindell. A council is formed by Lord Elrond, the elven leader of Rivindell, to discuss the ring's fate</li>
+        <li>Frodo offers to take the ring to Mordor and destroy it. The Fellowship of the Ring is formed to accompany him on his journey</li>
+        <li>The Fellowship face many obstacles from Saruman, who as turned traitor for Sauron. They venture into the Mines of Moria, a dwarven city inside of a mountain. They encounter a Balrog, and Gandalf goes down with it into the depths.</li>
+        <li>The Fellowship meets the Lady of Light, Galadriel, in Lothlorien to find safe passage to Amon Hen.</li>
+        <li>An ambush at Amon Hen leads to the death of Boromir and the Fellowship breaks.</li>
+        <li>Frodo and Sam set out on the journey to Mordor while Aragorn, Legolas, and Gimli pursue the Uruk-hai horde that captured Merry and Pippin in the ambush.</li>
+      </ul>
+      <h3>A Look At The Fellowship</h3>
+      <table border="1">
+        <tr>
+          <th>Character</th>
+          <th>Home</th>
+          <th>Popular Event</th>
+          <th>Popular Quote</th>
+        </tr>
+        <tr>
+          <td>Frodo Baggins</td>
+          <td>The Shire</td>
+          <td>Becomes the Ring Bearer</td>
+          <td>"I will take the Ring to Mordor. Though I do not know the way</td>
+        </tr>
+        <tr>
+          <td>Samwise Gamgee</td>
+          <td>The Shire</td>
+          <td>Accompanies Frodo</td>
+          <td>"Mr. Frodo ain't going anywhere without me!"</td>
+        </tr>
+        <tr>
+          <td>Meriadoc "Merry" Brandybuck</td>
+          <td>The Shire</td>
+          <td>Leads Frodo and Sam to Bree</td>
+          <td>"Buckleberry Ferry. Follow me!"</td>
+        </tr>
+        <tr>
+          <td>Peregrin "Pippin" Took</td>
+          <td>The Shire</td>
+          <td>Accompanies the Fellowship</td>
+          <td>"What about second breakfast?"</td>
+        </tr>
+        <tr>
+          <td>Aragorn</td>
+          <td>Rivendell</td>
+          <td>Fights off the Nazgul</td>
+          <td>"You have my sword."</td>
+        </tr>
+        <tr>
+          <td>Legolas</td>
+          <td>Mirkwood</td>
+          <td>Joins the Fellowship</td>
+          <td>"This is no mere Ranger. He is Aragorn, Son of Arathorn. You owe him your allegiance.</td>
+        </tr>
+        <tr>
+          <td>Gimli, Son of Gloin</td>
+          <td>The Blue Mountains and Erebor</td>
+          <td>Joins the Fellowship</td>
+          <td>"Nobody tosses a dwarf!"</td>
+        </tr>
+        <tr>
+          <td>Boromir</td>
+          <td>Gondor</td>
+          <td>Fights an orc hoarde and dies</td>
+          <td>"One does not simply walk into Mordor..."</td>
+        </tr>
+        <tr>
+          <td>Gandalf the Gray</td>
+          <td>The Undying Lands of Valinor</td>
+          <td>Defeats the Balrog</td>
+          <td>"You shall not pass!"</td>
+        </tr>
+      </table>
+      <h2>Want to Watch?</h2>
+      <p>You can buy/rent the movie on:</p>
+      <ul>
+        <li>
+          <a href="https://www.amazon.com/gp/video/detail/B002WXLJ58"
+            >Amazon Prime Video</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.vudu.com/content/browse/details/The-Lord-of-the-Rings-The-Fellowship-of-the-Ring/26084"
+            >VUDU</a
+          >
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=tsVH9WHrkRE&feature=youtu.be"
+            >YouTube</a
+          >
+        </li>
+      </ul>
+
+      <a href="{{ url_for('ttt') }}">The Two Towers</a>
+      <a href="{{ url_for('rotk') }}">The Return of the King</a>
+      <a href="{{ url_for('home') }}">Home</a>
+    </div>
+  </body>
+</html>
